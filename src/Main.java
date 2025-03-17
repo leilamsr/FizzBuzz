@@ -5,7 +5,7 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
 
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             String word = "";
 
             if (i % 3 == 0) {
@@ -15,11 +15,7 @@ public class Main {
                 word += "Buzz";
             }
 
-            if (word == "") {
-                word = String.valueOf(i);
-            }
-
-            System.out.println(word);
+            System.out.println(!word.isEmpty() ? word : i);
         }
     }
 }
